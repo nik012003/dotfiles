@@ -1,0 +1,51 @@
+{
+    "pressed": 1,
+    "height": 30,
+    //"output": "eDP-1",
+    "modules-left": ["wlr/workspaces"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "backlight", "battery","custom/clock"], 
+    "custom/clock": {
+        "exec": "/home/nik/.config/waybar/scripts/clock.sh",
+	"interval": 1,
+	"on-click": "/home/nik/.config/waybar/scripts/toggle.sh"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": [""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon} ",
+        "format-charging": "{capacity}%  ",
+        "format-plugged": "{capacity}%  ",
+        "format-alt": "{time} {icon} ",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+}

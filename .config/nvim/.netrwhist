@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/nik/.config/kitty'
+let g:netrw_dirhist_2='/home/nik/repos/suricata'
+let g:netrw_dirhist_1='/home/nik/repos/firegex/frontend/src/components/ServiceRow'
+let g:netrw_dirhist_0='/home/nik/repos/firegex/frontend/src/components'
+let g:netrw_dirhist_9='/home/nik/repos/firegex/frontend/src'
+let g:netrw_dirhist_8='/home/nik/repos/firegex/frontend/src/js'
+let g:netrw_dirhist_7='/home/nik/repos/firegex/frontend/src'
+let g:netrw_dirhist_6='/home/nik/repos/firegex/frontend'
+let g:netrw_dirhist_5='/home/nik/repos/firegex/frontend/src/components/ServiceRow'
+let g:netrw_dirhist_4='/home/nik/repos/firegex/frontend/src/components'
