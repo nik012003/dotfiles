@@ -1,7 +1,7 @@
 #window {
-    border: 3px solid --wofi-color0;
+    border: 3px solid #202124;
 	border-radius: 5px;
-	background-color: --wofi-color0;
+	background-color: #202124;
 	font-size: 18px;
 	font-family: "Iosevka Term SS03 Medium";
 	text-color: #FFFFFF;
@@ -36,7 +36,7 @@
 }
 
 #entry:selected {
-	background-color: --wofi-color0 ;
+	background-color: #90234E;
 }
 
 #text:selected {
