@@ -1,0 +1,12 @@
+[output]
+method = ncurses
+
+[color]
+
+gradient = 1
+gradient_count = 5
+gradient_color_5 = '#c0391f'
+gradient_color_4 = '#9f2440'
+gradient_color_3 = '#81204b'
+gradient_color_2 = '#3f2442'
+gradient_color_1 = '#61244c'

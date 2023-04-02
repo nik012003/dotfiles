@@ -1,15 +1,13 @@
 {
     "pressed": 1,
-    "height": 32,
-    "modules-left": ["wlr/workspaces","hyprland/window"],
-    "modules-center":["custom/space"],
-    "modules-right": ["custom/waybar-mpris","pulseaudio", "cpu", "memory","battery","custom/clock"], 
+    "height": 30,
+    //"output": "eDP-1",
+    "modules-left": ["wlr/workspaces"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "backlight", "battery","custom/clock"], 
     "custom/clock": {
         "exec": "/home/nik/.config/waybar/scripts/clock.sh",
+	"interval": 1,
 	"on-click": "/home/nik/.config/waybar/scripts/toggle.sh"
-    },
-    "custom/space":{
-        "format": "             "
     },
     "cpu": {
         "format": "{usage}% ",
@@ -18,15 +16,11 @@
     "memory": {
         "format": "{}% "
     },
-    "hyprland/window":{
-        "max-lenght": 10,
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": [""]
     },
-    "custom/waybar-mpris": {
-        "exec": "/home/nik/.config/waybar/scripts/music.sh",
-        "on-click": "waybar-mpris --send toggle",
-        "on-click-right": "waybar-mpris --send player-next",
-        "escape": true,
-    },    
     "battery": {
         "states": {
             // "good": 95,
@@ -41,6 +35,12 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
+    "wlr/workspaces": {
+     "format": "{icon}",
+     "on-scroll-up": "hyprctl dispatch workspace e+1",
+     "on-scroll-down": "hyprctl dispatch workspace e-1",
+     "on-click": "activate"
+   },
     "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-icons": {
@@ -53,11 +53,5 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
-    "wlr/workspaces": {
-     "format": "{icon}",
-     "on-scroll-up": "hyprctl dispatch workspace e+1",
-     "on-scroll-down": "hyprctl dispatch workspace e-1",
-     "on-click": "activate",
     },
 }

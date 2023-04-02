@@ -1,8 +1,13 @@
 #!/bin/sh
-toggle=$(cat /tmp/statusbar)
-if [ $toggle = "1" ]
-then
-	date '+%H:%M:%S'
-else
-	date '+%A %d %b'
-fi
+echo 0 > /tmp/statusbar
+while true
+do
+    toggle=$(cat /tmp/statusbar)
+    if [ $toggle = "1" ]
+    then
+        date '+%A %d %b'
+    else
+        date '+%H:%M:%S'
+    fi
+    sleep 0.5
+done
